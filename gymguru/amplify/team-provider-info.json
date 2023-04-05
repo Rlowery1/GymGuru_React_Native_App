@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gymguruapp-dev-114121-authRole",
+      "UnauthRoleArn": "arn:aws:iam::281607684597:role/amplify-gymguruapp-dev-114121-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::281607684597:role/amplify-gymguruapp-dev-114121-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-gymguruapp-dev-114121-deployment",
+      "UnauthRoleName": "amplify-gymguruapp-dev-114121-unauthRole",
+      "StackName": "amplify-gymguruapp-dev-114121",
+      "StackId": "arn:aws:cloudformation:us-west-2:281607684597:stack/amplify-gymguruapp-dev-114121/a18fecc1-cff3-11ed-bf36-02a7ba095bfb",
+      "AmplifyAppId": "d3c4z2nuii6ujx"
+    },
+    "categories": {
+      "auth": {
+        "gymguruappce2bc27a": {}
+      }
+    }
+  }
+}
