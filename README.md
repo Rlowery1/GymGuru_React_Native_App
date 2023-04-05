@@ -1,18 +1,22 @@
 GymGuru Application Setup
-This guide will walk you through setting up the GymGuru application on your local machine for testing. Please follow the instructions carefully to ensure a smooth setup process. If you encounter any issues, feel free to contact the repository owner with the exact error message you are receiving for assistance.
+
+This guide will walk you through setting up the GymGuru application on your local machine for testing. Please follow the instructions carefully to ensure a smooth setup 
+process. If you encounter any issues, feel free to contact the repository owner with the exact error message you are receiving for assistance.
 
 Prerequisites
-Git: Download Git
-Node.js: Download Node.js
-Expo CLI: Install Expo CLI by running npm install -g expo-cli
-An AWS account: Sign up for a free AWS account
-Expo mobile app on your iPhone/android: Download Expo from apple store/android store
+1. Git: Download Git
+2. Node.js: Download Node.js
+4. Expo CLI: Install Expo CLI by running npm install -g expo-cli
+5. An AWS account: Sign up for a free AWS account
+6. Expo mobile app on your iPhone/android: Download Expo from apple store/android store
+
 Step 1: Clone the repository
+
 Clone the GymGuru repository to your local machine using Git. Open your GIT command prompt or terminal and Copy this code: git clone https://github.com/Rlowery1/GymGuru_React_Native_App.git
 
 Take note of exactly where you clone/copy all of the files and directories using the git clone command so you can find it in the next step with the command prompt using cd
 
-Step 3: Create an IAM user in AWS
+Step 2: Create an IAM user in AWS
 
 1. Sign in to your AWS Management Console. Revert to prerequisites for the link to sign up for a free aws account if you haven't done so already; don't worry about the credit card information it requires, it's all free tier
 2. Navigate to the IAM console.
@@ -28,7 +32,7 @@ Step 3: Create an IAM user in AWS
 12. Next, create a descriptive tag and click "Create access key"
 13. Important: Download the CSV(Excel) file containing the Access key ID and Secret access key. Save this file as you will need it later to configure AWS Amplify.
 
-Step 4: Set up Amazon Cognito
+Step 3: Set up Amazon Cognito
 
 1. Sign in to your AWS Management Console.
 2. Navigate to the Amazon Cognito console.
@@ -51,7 +55,7 @@ Step 4: Set up Amazon Cognito
 19. Choose "Don't generate a client secret" *THIS IS IMPORTANT* then click "Create app client"
 20. Once you Click "Create app client" you should see your "User pool ID" at the top of the page and your "Client ID" at the bottom under the "App clients and analytics" section. Take note of these ID's since we will use them later, save them in a note pad if you would like for ease of use.
 
-Step 5: Set up AWS Lambda
+Step 4: Set up AWS Lambda
 
 1. Sign in to your AWS Management Console.
 2. Navigate to the AWS Lambda console.
@@ -66,7 +70,7 @@ Step 5: Set up AWS Lambda
 11. Click the "Code" tab, choose "Upload from" then choose ".zip file" from the dropdown.
 12. Upload the resendVerificationHandler.zip file from your local machine (the file should be in the cloned repository under /gymguru-lambdas/ directory).
 
-Step 6: Set up API Gateway
+Step 5: Set up API Gateway
 
 1. Sign in to your AWS Management Console.
 2. Navigate to the API Gateway console.
@@ -80,31 +84,31 @@ Step 6: Set up API Gateway
 10. Select the correct region and enter the name of the Lambda function created earlier.
 11. Click "Save".
 
-Step 7: Update the configuration files
+Step 6: Update the configuration files
 
 1. Locate the aws-exports.sample.js and UserPool.sample.js files in the cloned repository. *They should be in /gymguru/aws-exports.sample.js and /gymguru/src/screens/UserPool.sample.js*
 2. Remove the .sample from the filenames, so they become aws-exports.js and UserPool.js. VERY IMPORTANT
 3. Update the aws-exports.js and UserPool.js files with the necessary information from the AWS services created earlier, such as the Pool ID, App client ID, and region, etc.
 
-Step 8: Install dependencies
+Step 7: Install dependencies
 
 1. First, open your command prompt by typing in cmd in your search bar and clicking on the command prompt pop up.
 2. Once in the command prompt use the "cd" command to find the path where you cloned/copied the repo from github.com and "cd" into the gymguru folder/directory
 3. Run the following command in the gymguru directory in the terminal to install the required dependencies: npm install
 
-Step 9: Configure AWS Amplify
+Step 8: Configure AWS Amplify
 
 1. Using the same terminal in Step 7, run this command: amplify configure *You may be taken/redirected to the AWS console page to create a user etc during this part of the setup, ignore this and close the pages when they pop up since we have already done this*
 2. Sign in to your AWS account when prompted if you are not already signed in. For the region, enter the same region you used for the other AWS services (eg. us-west-1).
 3. Enter the Access Key ID and Secret Access Key from the CSV/Excel file downloaded earlier.
 
-Step 10: Initialize Amplify ALMOST THERE :)
+Step 9: Initialize Amplify ALMOST THERE :)
 
 1. In the terminal, run amplify init.
 2. Follow the prompts to set up the Amplify project. MAKE SURE YOU CHOOSE THE SAME REGION WHERE YOUR AMAZON SERVICES ARE LOCATED
 3. After the project is initialized, run amplify push.
 
-Step 11: Test the app with Expo
+Step 10: Test the app with Expo
 
 1. Go to the apple or android store (Depending on which phone you have) and download the Expo app onto your physical device.
 2. In your terminal, run this code: expo start.
