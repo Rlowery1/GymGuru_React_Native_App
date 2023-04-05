@@ -42,7 +42,10 @@ amplifytools.xcconfig
 
 # OSX
 #
+# .gitignore
 
+# Amplify
+amplify/
 # Xcode
 #
 *.pbxuser
