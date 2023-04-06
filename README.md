@@ -67,8 +67,11 @@ Step 4: Set up AWS Lambda
 8. Choose "Node.js 18x" or higher
 9. Choose "x86_64*
 10. Click "Create function"
-11. Click the "Code" tab, choose "Upload from" then choose ".zip file" from the dropdown.
-12. Upload the resendVerificationHandler.zip file from your local machine (the file should be in the cloned repository under /gymguru-lambdas/ directory).
+11. Now find the directory "gymguru-lambdas" and then find the "resendVerificationCode" directory. /gymguru-lambdas/resendVerificationCode/
+12. Inside the resendVerificationCode directory find the "index.mjs" file and edit the file with your own cognito region and userpool ID and save the changes.
+13. Next, go into the "resendVerificationCode" directory and compress all the files into a .zip file and give it a desired name.
+14. Go back to the Lambda function that was created and Click the "Code" tab, choose "Upload from" then choose ".zip file" from the dropdown.
+15. Upload the .zip file that was created in step 13.
 
 Step 5: Set up API Gateway
 
