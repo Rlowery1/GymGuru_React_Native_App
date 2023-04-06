@@ -1,8 +1,8 @@
 import AWS from 'aws-sdk';
 const { CognitoIdentityServiceProvider } = AWS;
 
-const REGION = 'us-west-1';
-const USER_POOL_ID = 'us-west-1_oVtpvDMfg';
+const REGION = 'YOUR_AWS_COGNITO_REGION';
+const USER_POOL_ID = 'YOUR_AWS_USER_POOLS_ID';
 
 const cognitoIdentityServiceProvider = new CognitoIdentityServiceProvider({ region: REGION });
 
@@ -10,7 +10,7 @@ const handler = async (event) => {
   const username = JSON.parse(event.body).username;
 
   const params = {
-    ClientId: '78qrhubalshetm8if5c57las12',
+    ClientId: 'YOUR_AWS_USER_POOLS_WEB_CLIENT_ID',
     Username: username,
   };
 
